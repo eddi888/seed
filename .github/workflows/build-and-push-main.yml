@@ -55,16 +55,16 @@ jobs:
         MAX_WAIT_ELEMENT: 10000
         MAX_WAIT_SUCCESS: 20000
         MAX_WAIT_DISAPPEAR: 20000
-  publish:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy JavaDoc
-        uses: MathieuSoysal/Javadoc-publisher.yml@v2.4.0
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          javadoc-branch: javadoc
-          java-version: 17
-          target-folder: javadoc
+  #publish:
+  #  runs-on: ubuntu-latest
+  #  steps:
+  #    - name: Deploy JavaDoc
+  #      uses: MathieuSoysal/Javadoc-publisher.yml@v2.4.0
+  #      with:
+  #        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #        javadoc-branch: javadoc
+  #        java-version: 17
+  #        target-folder: javadoc
     #- name: Publish Test Report
     #  if: ${{ always() }}
     #  uses: scacap/action-surefire-report@v1
